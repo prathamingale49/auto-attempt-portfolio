@@ -4,7 +4,7 @@ title: Home
 colors: colors-a
 backgroundImage:
   type: BackgroundImage
-  url: /images/bg1.jpg
+  url: /images/testbg1.jpg
   backgroundSize: cover
   backgroundPosition: center
   backgroundRepeat: no-repeat
@@ -14,12 +14,11 @@ sections:
     colors: colors-f
     backgroundSize: full
     title: >-
-      I’m an engineer, digital artist, consultant and a bunch of other
-      impressive titles and buzz words.
+      I'm an engineer, designer, creator, and a learner.
     subtitle: >-
-      This is my info—I’m sharing it all this with ya’ll to impress you with all
-      the hard work I’ve done in the past few years. Once you’re impressed, you
-      can continue to scroll down to see more details and credentials about me.
+      Welcome to my website, this should be a pretty comprehensive collection of my
+      projects and my experience. I'm currently an electrical engineering student at
+      Georgia Tech, and I'm always keen to learn a new skill and try new challenges.
     styles:
       self:
         height: auto
