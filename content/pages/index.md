@@ -4,7 +4,7 @@ title: Home
 colors: colors-a
 backgroundImage:
   type: BackgroundImage
-  url: /images/testbg1.jpg
+  url: /images/testbg2.jpg
   backgroundSize: cover
   backgroundPosition: center
   backgroundRepeat: no-repeat
@@ -16,7 +16,7 @@ sections:
     title: >-
       I'm an engineer, designer, creator, and a learner.
     subtitle: >-
-      Welcome to my website, this should be a pretty comprehensive collection of my
+      Welcome to my website, which should be a pretty comprehensive collection of my
       projects and my experience. I'm currently an electrical engineering student at
       Georgia Tech, and I'm always keen to learn a new skill and try new challenges.
     styles:
