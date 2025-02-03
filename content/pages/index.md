@@ -8,17 +8,17 @@ backgroundImage:
   backgroundSize: cover
   backgroundPosition: center
   backgroundRepeat: no-repeat
-  opacity: 75
+  opacity: 40
 sections:
   - elementId: ''
     colors: colors-f
     backgroundSize: full
     title: >-
-      I'm an engineer, designer, creator, and a learner.
+      I'm an engineer, inventor, builder, and a learner.
     subtitle: >-
-      Welcome to my website, which should be a pretty comprehensive collection of my
-      projects and my experience. I'm currently an electrical engineering student at
-      Georgia Tech, and I'm always keen to learn a new skill and try new challenges.
+      Hi! I'm Pratham, and welcome to my website. This should be a pretty comprehensive collection of my
+      projects and experiences. I'm currently an electrical engineering student at
+      Georgia Tech, and I'm always keen to learn a new skill and attempt new challenges.
     styles:
       self:
         height: auto
