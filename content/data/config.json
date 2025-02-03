@@ -5,13 +5,31 @@
         "type": "Header",
         "headerVariant": "variant-c",
         "isSticky": false,
-        "title": "Personal",
+        "title": "Home",
         "isTitleVisible": true,
         "primaryLinks": [
             {
                 "type": "Link",
-                "label": "Info",
-                "url": "/info"
+                "label": "About Me",
+                "url": "/aboutme",
+                "hasDropdown": true,
+                "dropdownLinks" : [
+                    {
+                        "type": "Link",
+                        "label": "Resume",
+                        "url": "/aboutme/resume"
+                    },
+                    {
+                        "type": "Link",
+                        "label": "Coursework",
+                        "url": "/aboutme/coursework"
+                    },
+                    {
+                        "type": "Link",
+                        "label": "Career Plan",
+                        "url": "/aboutme/careerplan"
+                    }
+                ]
             },
             {
                 "type": "Link",
