@@ -74,5 +74,6 @@ const components = {
     PostLayout: dynamic(() => import('./layouts/PostLayout')),
     PostFeedLayout: dynamic(() => import('./layouts/PostFeedLayout')),
     ProjectLayout: dynamic(() => import('./layouts/ProjectLayout')),
+    CollapsibleSection: dynamic(() => import('./sections/CollapsibleSection')),
     ProjectFeedLayout: dynamic(() => import('./layouts/ProjectFeedLayout'))
 };
