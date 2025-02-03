@@ -13,12 +13,19 @@ sections:
   - elementId: ''
     colors: colors-f
     backgroundSize: full
+    type: HeroSection
     title: >-
       I'm an engineer, inventor, builder, and a learner.
     subtitle: >-
       Hi! I'm Pratham, and welcome to my website. This should be a pretty comprehensive collection of my
       projects and experiences. I'm currently an electrical engineering student at
       Georgia Tech, and I'm always keen to learn a new skill and attempt new challenges.
+    media:
+      align: right
+      type: ImageBlock
+      url: /images/goodphotooo.png
+      altText: 'Pratham'
+      className: 'oval-image'
     styles:
       self:
         height: auto
@@ -31,21 +38,37 @@ sections:
         padding:
           - pt-36
           - pb-48
-          - pl-4
-          - pr-4
+          - pl-16
+          - pr-16
+        display: flex
+        flexDirection: column
         alignItems: center
         justifyContent: center
-        flexDirection: row-reverse
+        gap: 16
+        classNames: 'lg:flex-row'
       title:
         textAlign: left
+        width: 100%
+        paddingRight: 16
+        classNames: 'lg:flex-grow-2 lg:w-2/3' # Take 2/3 of the space on large screens
       subtitle:
         textAlign: left
+        width: 100%
+        paddingRight: 16
+        classNames: 'lg:flex-grow-2 lg:w-2/3' # Take 2/3 of the space on large screens
       text:
         textAlign: left
+        width: 100%
+        paddingRight: 16
+        classNames: 'lg:flex-grow-2 lg:w-2/3' # Take 2/3 of the space on large screens
+      media:
+        width: 100%
+        maxWidth: 400px
+        opacity: 70
+        borderRadius: 'full'
+        classNames: 'lg:flex-grow-1 lg:w-1/3 lg:ml-auto' # Take 1/3 of the space and push to the right
       actions:
         justifyContent: flex-start
-    type: HeroSection
-    actions: []
   - colors: colors-f
     type: FeaturedProjectsSection
     elementId: ''

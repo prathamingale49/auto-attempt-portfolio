@@ -50,7 +50,7 @@ sections:
     type: HeroSection
     actions: []
   - type: CollapsibleSection
-    title: 'My Coursework'
+    title: 'My Coursework History'
     items:
       - header: 'Spring 2025'
         content:
@@ -94,6 +94,7 @@ sections:
           - 'Calculus II (AP)'
           - 'Computer Science A (AP)'
           - 'Environmental Science (AP)'
+          - 'Foundations of Data Science (Honors)'
           - 'Language & Composition (AP)'
           - 'Physics 1 (AP)'
     styles:

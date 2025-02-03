@@ -261,6 +261,32 @@
         @apply md:text-right;
     }
 
+    .oval-image-container {
+        width: 250px; /* Adjust size as needed */
+        height: 300px; /* Keep proportionate */
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .oval-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50% / 60%; /* Creates an oval shape */
+    }
+    
+    .oval-border {
+        position: absolute;
+        width: 100%; /* Slightly bigger than the image */
+        height: 100%;
+        border-radius: 50% / 60%;
+        border: 4px solid white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        pointer-events: none; /* Prevents interaction issues */
+    }
+    
     /* Color palettes */
     .colors-a {
         @apply bg-dark text-on-dark;
