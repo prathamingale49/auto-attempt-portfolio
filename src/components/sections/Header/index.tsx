@@ -8,6 +8,7 @@ import ImageBlock from '../../molecules/ImageBlock';
 import CloseIcon from '../../svgs/close';
 import MenuIcon from '../../svgs/menu';
 
+
 export default function Header(props) {
     const { headerVariant, isSticky, title, isTitleVisible, logo, primaryLinks = [], socialLinks = [], styles = {} } = props;
     const headerWidth = styles.self?.width ?? 'narrow';
@@ -95,27 +96,75 @@ function HeaderVariantB(props) {
 
 function HeaderVariantC(props) {
     const { primaryLinks = [], socialLinks = [], ...logoProps } = props;
+
     return (
         <div className="flex items-stretch relative">
             <SiteLogoLink {...logoProps} />
+
+            {/* Primary links */}
+            {primaryLinks.length > 0 && (
+                <ul
+                    className={classNames(
+                        'hidden lg:flex',
+                        'border-l',
+                        'border-current',
+                        'divide-x',
+                        'divide-current',
+                        {
+                            'ml-auto': primaryLinks.length === 0
+                        }
+                    )}
+                >
+                    {primaryLinks.map((link, index) => {
+                        // Check if the link has a dropdown
+                        if (link.hasDropdown) {
+                            return (
+                                <li key={index} className="relative group">
+                                    {/* Regular Link */}
+                                    <Action
+                                        {...link}
+                                        className="sb-component-link-fill p-4 font-normal text-base tracking-widest uppercase"
+                                    />
+
+                                    {/* Dropdown menu */}
+                                    <ul className="dropdown-menu absolute left-0 hidden bg-gray-800 text-white group-hover:block opacity-0 group-hover:opacity-100">
+                                        {link.dropdownLinks.map((dropdownLink, dropdownIndex) => (
+                                            <li key={dropdownIndex}>
+                                                <Action
+                                                    {...dropdownLink}
+                                                    className="sb-component-link-fill p-4 text-base"
+                                                />
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </li>
+                            );
+                        }
+
+                        return (
+                            <li key={index} className="inline-flex items-stretch">
+                                <Action
+                                    {...link}
+                                    className="sb-component-link-fill p-4 font-normal text-base tracking-widest uppercase"
+                                />
+                            </li>
+                        );
+                    })}
+                </ul>
+            )}
+
+            {/* Social links */}
             {socialLinks.length > 0 && (
                 <ul className="hidden lg:flex border-l border-current ml-auto">
                     <ListOfSocialLinks links={socialLinks} inMobileMenu={false} />
                 </ul>
             )}
-            {primaryLinks.length > 0 && (
-                <ul
-                    className={classNames('hidden', 'lg:flex', 'border-l', 'border-current', 'divide-x', 'divide-current', {
-                        'ml-auto': primaryLinks.length === 0
-                    })}
-                >
-                    <ListOfLinks links={primaryLinks} inMobileMenu={false} />
-                </ul>
-            )}
+
             {(primaryLinks.length > 0 || socialLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
 }
+
 
 function MobileMenu(props) {
     const { primaryLinks = [], socialLinks = [], ...logoProps } = props;

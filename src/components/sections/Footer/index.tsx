@@ -13,8 +13,15 @@ export default function Footer(props) {
                         <div className={classNames('mt-6', contacts ? 'w-full' : 'md:mr-auto')}>
                             <ul className="flex flex-wrap max-w-5xl text-lg">
                                 {primaryLinks.map((link, index) => (
-                                    <li key={index} className="mr-8 mt-2">
-                                        <Action {...link} />
+                                     <li key={index} className="mr-8 mt-2">
+                                     <a
+                                         href={link.url}
+                                         target={isExternal(link.url) ? "_blank" : "_self"}
+                                         rel={isExternal(link.url) ? "noopener noreferrer" : ""}
+                                         className="underline hover:no-underline"
+                                     >
+                                         {link.label}
+                                     </a>
                                     </li>
                                 ))}
                             </ul>
@@ -48,6 +55,10 @@ export default function Footer(props) {
             </div>
         </footer>
     );
+}
+
+function isExternal(url) {
+    return url.startsWith("http") || url.startsWith("//");
 }
 
 function Contacts(props) {

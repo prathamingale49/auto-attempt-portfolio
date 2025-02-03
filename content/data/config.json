@@ -5,13 +5,31 @@
         "type": "Header",
         "headerVariant": "variant-c",
         "isSticky": false,
-        "title": "Personal",
+        "title": "Home",
         "isTitleVisible": true,
         "primaryLinks": [
             {
                 "type": "Link",
-                "label": "Info",
-                "url": "/info"
+                "label": "About Me",
+                "url": "/aboutme",
+                "hasDropdown": true,
+                "dropdownLinks" : [
+                    {
+                        "type": "Link",
+                        "label": "Resume",
+                        "url": "/aboutme/resume"
+                    },
+                    {
+                        "type": "Link",
+                        "label": "Coursework",
+                        "url": "/aboutme/coursework"
+                    },
+                    {
+                        "type": "Link",
+                        "label": "Career Plan",
+                        "url": "/aboutme/careerplan"
+                    }
+                ]
             },
             {
                 "type": "Link",
@@ -27,16 +45,32 @@
         "socialLinks": [
             {
                 "type": "Social",
-                "altText": "Twitter",
-                "label": "Twitter",
-                "url": "https://twitter.com/netlify",
-                "icon": "twitter"
+                "altText": "LinkedIn",
+                "label": "LinkedIn",
+                "url": "https://www.linkedin.com/in/pratham-ingale/",
+                "icon": "linkedin",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+            },
+            {
+                "type": "Social",
+                "altText": "YouTube",
+                "label": "YouTube",
+                "url": "https://www.youtube.com/@PrathamIngale/featured",
+                "icon": "youtube"
+            },
+            {
+                "type": "Social",
+                "altText": "Instagram",
+                "label": "Instagram",
+                "url": "https://www.instagram.com/pratham.ingale5/",
+                "icon": "instagram"
             },
             {
                 "type": "Social",
                 "altText": "GitHub",
                 "label": "GitHub",
-                "url": "https://github.com/netlify-templates",
+                "url": "https://github.com/prathamingale49",
                 "icon": "github"
             }
         ],
@@ -58,7 +92,7 @@
             {
                 "type": "Link",
                 "label": "Contact",
-                "url": "mailto:thisismyemail.@myemail.me",
+                "url": "mailto:pratham.ing49@gmail.com",
                 "altText": ""
             },
             {
@@ -70,21 +104,25 @@
             {
                 "type": "Link",
                 "label": "GitHub",
-                "url": "https://github.com/netlify-templates",
+                "url": "https://github.com/prathamingale49",
                 "altText": "Netlify templates"
+            },
+            {
+                "type": "Link",
+                "label": "LinkedIn",
+                "url": "https://www.linkedin.com/in/pratham-ingale/",
+                "altText": ""
             }
         ],
         "contacts": {
             "type": "ContactBlock",
             "title": "Contact details",
-            "phoneNumber": "850-123-5021",
+            "phoneNumber": "704-431-7206",
             "phoneAltText": "My phone number",
-            "email": "thisismyemail.@myemail.me",
-            "emailAltText": "My email",
-            "address": "312 Lovely Street, Brooklyn, NY, 123456",
-            "addressAltText": "My address"
+            "email": "pratham.ing49@gmail.com",
+            "emailAltText": "My email"
         },
-        "copyrightText": "Powered by [Netlify](https://www.netlify.com/)",
+        "copyrightText": "",
         "styles": {
             "self": {
                 "width": "narrow",

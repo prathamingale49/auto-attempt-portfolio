@@ -1,0 +1,43 @@
+/* styles/dropdown.css */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;  /* Solid background color */
+    border-radius: 4px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 100%;
+    text-align: center;
+    opacity: 1;
+    z-index: 9999; /* Ensure dropdown appears above other content */
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #555;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    padding: 10px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;  /* Smooth background color transition */
+}
+
+.dropdown-menu a:hover {
+    background-color: #444;  /* Highlight background on hover */
+}
+
+/* Make sure the dropdown is visible on hover */
+.group:hover .dropdown-menu {
+    display: block;
+    opacity: 1;  /* Ensure it's fully opaque */
+}
